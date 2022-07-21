@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Count from './Count';
 
 function App() {
+    let a= [];
+    let j=0
+    for(let i=0; i<18;i++){
+      j++
+      a.push({number : j})
+    }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="slideout-container">
+        <main id="panel" className="slideout-panel slideout-panel-left">
+          <div className="content top-home m-3 text-center" style={{direction: "rtl"}}>
+            <div className="row" id="jojo">
+
+                {
+                  a.map((item, index) => <Count key={index} prop={index}/>)
+                }
+
+            </div>
+            </div>
+          </main>
+        </div>
     </div>
   );
 }
+
+
 
 export default App;
