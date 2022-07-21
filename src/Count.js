@@ -22,7 +22,7 @@ function updateCount(){setCounter(++Counts);
     <div className="card border-primary mb-3">
       <div className="card-header counter-text">Counter</div>
           <div className="card-body text-primary"> 
-      <div className="counter-btn counter-total counter-total-3" onClick={()=> useDispatch(increment())}>{value}</div>
+      <div className="counter-btn counter-total counter-total-3" onClick={()=> dispatch(increment())}>{value}</div>
      </div>
     </div>
 </div>
